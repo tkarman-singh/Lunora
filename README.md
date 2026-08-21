@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎧 MusicCLIP v2
+# 🎧 SongCLIP
 
 **A CLIP-style dual-encoder that learns "what song comes next" from listening sequences**
 
@@ -31,7 +31,7 @@
 
 ## 🌟 Overview
 
-MusicCLIP learns to predict **what song comes next** in a listening session by embedding both the listening *sequence* and each *candidate song* into a shared vector space — the same contrastive idea behind OpenAI's CLIP, just swapping (image, text) for (sequence, song).
+SongCLIP learns to predict **what song comes next** in a listening session by embedding both the listening *sequence* and each *candidate song* into a shared vector space — the same contrastive idea behind OpenAI's CLIP, just swapping (image, text) for (sequence, song).
 
 > **Why this instead of a normal recommender?** Contrastive dual-encoders scale well: once trained, recommending is just a nearest-neighbor search in embedding space against however many candidate songs you have — no need to score every song individually.
 
@@ -86,8 +86,8 @@ Both encoders are trained jointly so that the embedding of a real "next song" la
 
 ```bash
 # 1. Clone and install
-git clone https://github.com/<your-username>/musicclip-v2.git
-cd musicclip-v2
+git clone https://github.com/<your-username>/songclip.git
+cd songclip
 pip install -r requirements.txt
 
 # 2. Get the data (free, no signup — ~342MB)
@@ -103,9 +103,9 @@ python evaluate.py        # Recall@K, MRR, NDCG@K
 ## 📁 Project Structure
 
 ```
-musicclip-v2/
+songclip/
 ├── data_prep.py       # loads FMA metadata → sequences + normalized features
-├── model.py            # SequenceEncoder, SongEncoder, MusicCLIP
+├── model.py            # SequenceEncoder, SongEncoder, SongCLIP
 ├── dataset.py           # SequenceDataset + genre-aware hard-negative sampler
 ├── losses.py            # symmetric InfoNCE contrastive loss
 ├── train.py             # training loop
