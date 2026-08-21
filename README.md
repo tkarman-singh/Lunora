@@ -100,17 +100,10 @@ python train.py           # train the dual encoder
 python evaluate.py        # Recall@K, MRR, NDCG@K
 ```
 
-## 📁 Project Structure
+## 📁 Project Structure (In production)
 
 ```
 songclip/
-├── data_prep.py       # loads FMA metadata → sequences + normalized features
-├── model.py            # SequenceEncoder, SongEncoder, SongCLIP
-├── dataset.py           # SequenceDataset + genre-aware hard-negative sampler
-├── losses.py            # symmetric InfoNCE contrastive loss
-├── train.py             # training loop
-├── evaluate.py           # Recall@K / MRR / NDCG@K evaluation
-├── requirements.txt
 └── README.md
 ```
 
