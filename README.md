@@ -79,22 +79,84 @@ Lunora doesn't use a trained ML model — it uses **genre-vector cosine similari
 
 **Prerequisites:** Python 3.9+, and a free [TMDB API key](https://www.themoviedb.org/settings/api).
 
+Clone the repo first, on any OS:
+
 ```bash
-# 1. Clone the repo
 git clone https://github.com/<your-username>/lunora.git
 cd lunora
-
-# 2. Install dependencies
-pip install -r requirements.txt
-
-# 3. Set your TMDB API key
-export TMDB_API_KEY="your_tmdb_key"
-
-# 4. Start the backend
-uvicorn api:app --reload
 ```
 
-Then just open **`lunora.html`** in your browser — the frontend talks to the API at `http://127.0.0.1:8000` by default.
+Then follow the steps for your platform below.
+
+<br>
+
+### 🍎 macOS
+
+```bash
+# 1. Install dependencies
+pip3 install -r requirements.txt
+
+# 2. Set your TMDB API key
+export TMDB_API_KEY="your_tmdb_key"
+
+# 3. Start the backend
+uvicorn api:app --reload
+
+# 4. Open the frontend (in a new terminal tab)
+open lunora.html
+```
+
+<br>
+
+### 🐧 Linux
+
+```bash
+# 1. Install dependencies
+pip3 install -r requirements.txt
+
+# 2. Set your TMDB API key
+export TMDB_API_KEY="your_tmdb_key"
+
+# 3. Start the backend
+uvicorn api:app --reload
+
+# 4. Open the frontend (in a new terminal tab)
+xdg-open lunora.html
+```
+
+<br>
+
+### 🪟 Windows (PowerShell)
+
+```powershell
+# 1. Install dependencies
+pip install -r requirements.txt
+
+# 2. Set your TMDB API key
+$env:TMDB_API_KEY = "your_tmdb_key"
+
+# 3. Start the backend
+uvicorn api:app --reload
+
+# 4. Open the frontend (in a new terminal tab)
+start lunora.html
+```
+
+<details>
+<summary><strong>Using Command Prompt (cmd.exe) instead?</strong></summary>
+<br>
+
+Only the API key step changes:
+
+```cmd
+set TMDB_API_KEY=your_tmdb_key
+```
+
+</details>
+
+<br>
+
+> 💡 On every platform, the backend runs at `http://127.0.0.1:8000` and `lunora.html` is a static file — you can also just double-click it in your file explorer instead of using the `open` / `xdg-open` / `start` commands above. Keep the `uvicorn` terminal running while you use the app.
 
 <br>
 
