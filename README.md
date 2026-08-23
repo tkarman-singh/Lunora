@@ -77,7 +77,7 @@ Lunora doesn't use a trained ML model — it uses **genre-vector cosine similari
 
 ## 🚀 Getting Started
 
-**Prerequisites:** Python 3.9+, and a free [TMDB API key](https://www.themoviedb.org/login).
+**Prerequisites:** Python 3.9+, and a free [TMDB API key](https://www.themoviedb.org/settings/api).
 
 ```bash
 # 1. Clone the repo
